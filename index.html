@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Holiday Party</title>
+  <script src=snowstorm.js></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="style.css" />
+<script>
+	//clears name on click
+		function clearName() {
+			if (document.getElementById('nameField').value == 'First and Last Name') {
+				document.getElementById('nameField').value = '';
+			}
+		}
+	//clears number on click
+		function clearPhone() {
+			if (document.getElementById('phoneField').value == 'example: 212-123-1234') {
+				document.getElementById('phoneField').value = '';
+			}
+		}
+		//brings back default text if namefield is empty
+		function resetName() {
+			if (document.getElementById('nameField').value == '') {
+				document.getElementById('nameField').value = 'First and Last Name';
+			}
+		}
+		//brings back default text if phonefield is empty
+		function resetPhone() {
+			if (document.getElementById('phoneField').value == '') {
+				document.getElementById('phoneField').value = 'example: 212-123-1234';
+			}
+		}
+		//clears number on click
+			function clearEmail() {
+				if (document.getElementById('emailField').value == 'example: example.gmail.com') {
+					document.getElementById('emailField').value = '';
+				}
+			}
+			//brings back default text if namefield is empty
+			function resetEmail() {
+				if (document.getElementById('emailField').value == '') {
+					document.getElementById('emailField').value = 'example: example.gmail.com';
+				}
+			}
+	</script>
+</head>
+
+<body>
+  <img src="https://lh3.googleusercontent.com/proxy/bhcWfBFtv01Wxcd4ys1xAE4LDoOPK4AhZEmDFXTTTRUAGB28qYO5kNTLv8_9rSiBzeu8UUv_V4ERen3bZMnUlCfiqGn4o9nEM0XdZ1NXg2VnXxkAUj0L7YNgbimZIzlMvLisvHWykJglGgGlWfQnoiFi09bjBSfAcSdewIySDA" alt="title"
+    class="center">
+  <h2 class="information">You and a guest are invited to the greatest holiday party ever</h2>
+  <h2 id="date"class="information">Date: December 25, 2021</h2>
+  <h2 id="address" class="date">Address:<br> 28 Rutledge Rd. Marlboro NJ 07751</h2>
+    <main role="main">
+		<div class="contentWrapper">
+			<form action="" method="post" name="signUpForm" id="signUpForm">
+				<fieldset id="signUp">
+					<legend>RSVP</legend>
+
+					<label for="nameField">Name:</label>
+					<input id="nameField" name="nameField" type="text" class="textfield" value="First and Last Name" onFocus="clearName();"onblur="resetName();">
+
+					<label for="phoneField">Phone:</label>
+					<input id="phoneField" name="phoneField" type="text" class="textfield" value="example: 212-123-1234" onFocus="clearPhone();"onblur="resetPhone();">
+
+					<label for="emailField">Email (optional):</label>
+					<input id="emailField" name="emailField" type="text" class="textfield" value="example: example.gmail.com" onFocus="clearEmail();"onblur="resetEmail();">
+
+					<input id="submit" type="submit" name="submit" value="Respond">
+
+				</fieldset>
+			</form>
+		</div>
+	</main>
+  <footer class="py-4 bg-dark text-white-50">
+    <p class="text-center">Copyright &copy; Justin Feldstein</p>
+  </footer>
+</body>
+
+</html>
